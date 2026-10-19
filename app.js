@@ -209,7 +209,10 @@ const emiCalcModal = document.getElementById('emiCalcModal');
 document.getElementById('aiAdvisorBtn').onclick = () => aiDrawer.classList.remove('hidden');
 document.getElementById('closeDrawerBtn').onclick = () => aiDrawer.classList.add('hidden');
 
-document.getElementById('apiKeyBtn').onclick = () => keyModal.classList.remove('hidden');
+document.getElementById('apiKeyBtn').onclick = () => {
+  document.getElementById('userKeyInput').value = apiKey; // Pre-fills saved key
+  keyModal.classList.remove('hidden');
+};
 document.getElementById('closeModalBtn').onclick = () => keyModal.classList.add('hidden');
 
 document.getElementById('calcModalBtn').onclick = () => {
